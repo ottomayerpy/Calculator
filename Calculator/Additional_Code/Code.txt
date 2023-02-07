@@ -1,0 +1,238 @@
+﻿/*
+            string Eq1 = LabelNumber.Text;
+            string[] math = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+", "-", "*", "/" };
+            foreach (string q in math)
+            {
+                while (Eq1.Contains(q))
+                    Eq1 = Eq1.Replace(q, null);
+            }
+            Eq1 = new string(Eq1.Reverse().ToArray());
+
+            char[] Eq2 = Eq1.ToCharArray();
+
+            foreach (char w in Eq2)
+            {
+                if (w == '^')
+                {
+                    MessageBox.Show("^");
+                    SortMathExp a = new SortMathExp();
+
+                    while (Eq.Contains("^"))
+                    {
+                        Eq = a.Sort(Eq);
+                        MessageBox.Show(Eq);
+                    }
+                }
+                if (w == '√')
+                {
+                    MessageBox.Show("√");
+
+                    SortMathExp a = new SortMathExp();
+
+                    while (Eq.Contains("√"))
+                    {
+                        Eq = a.Sort2(Eq);
+                        MessageBox.Show(Eq);
+                    }
+                }
+                    
+            }
+
+    */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+            //int i = Eq.Length;
+
+            //do
+            //{
+            //    MessageBox.Show("while");
+
+            //    switch (Eq.Substring(i, 1))
+            //    {
+            //        case "^":
+            //            MessageBox.Show("pow");
+            //            break;
+            //        case "√":
+            //            MessageBox.Show("sqrt");
+            //            break;
+            //        case ":":
+            //        case "!":
+            //        case "%":
+            //            break;
+            //        default:
+            //            MessageBox.Show("fail");
+            //            break;
+            //    }
+            //    i--;
+            //}
+            //while (i == 0);
+
+            //for (int i = 99; i < g; i--)
+            //{
+            //    string b = Eq.Substring(i, 1);
+
+            //    MessageBox.Show(i + "<<<  b =" + b);
+
+            //    switch (b)
+            //    {
+            //        case "^":
+            //            MessageBox.Show("pow");
+            //            break;
+            //        case "√":
+            //            MessageBox.Show("sqrt");
+            //            break;
+            //        case ":":
+            //        case "!":
+            //        case "%":
+            //            break;
+            //        default:
+            //            MessageBox.Show("fail");
+            //            break;
+            //    }
+            //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			//bool a0 = LabelNumber.Text.Contains("^") && LabelNumber.Text.Contains(":");
+                bool a1 = LabelNumber.Text.Contains(")") && !LabelNumber.Text.Contains("(");
+                //bool a2 = LabelNumber.Text.Contains("^") && LabelNumber.Text.Contains("√");
+                //bool a3 = LabelNumber.Text.Contains("√√");
+                bool a4 = LabelNumber.Text.Contains(":") && LabelNumber.Text.Contains("!");
+                //bool a5 = LabelNumber.Text.Contains(":") && LabelNumber.Text.Contains("√");
+                bool a6 = LabelNumber.Text.Contains("%") && LabelNumber.Text.Contains("√");
+
+                if (/*a0 == true ||*/ a1 == true || a4 == true)
+                {
+                    ButtonClearOne.PerformClick();
+                }
+                if (/*a2 == true || a5 == true ||*/ a6 == true)
+                {
+                    if (((Button)sender).Tag.ToString() == "√")
+                        LabelNumber.Text = LabelNumber.Text.Replace("√", null);
+                    else
+                        ButtonClearOne.PerformClick();
+                }
+                //if (a3 == true)
+                //{
+                //    LabelNumber.Text = LabelNumber.Text.Replace("√√", null);
+                //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				if (/*((Button)sender).Tag.ToString() != "√" && */((Button)sender).Tag.ToString() != ":")
+                LabelNumber.Text += ((Button)sender).Tag.ToString();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				switch (((Button)sender).Tag.ToString()) // При нажатии перечисленных кейсов, ноль не стирается
+            {
+                case ",":
+                case "+":
+                //case "-":
+                case "*":
+                case "/":
+                case "^":
+                //case "√":
+                    //if (LabelNumber.Text == "0")
+                    //    LabelNumber.Text = null;
+                    //LabelNumber.Text = LabelNumber.Text.Insert(0, "√");
+                    break;
+                case ":":
+                    Min_Max = ((Button)sender).Text.ToString();
+                    if (!LabelNumber.Text.Contains(":"))
+                        LabelNumber.Text += ":";
+                    break;
+                default:
+                    if (LabelNumber.Text == "0" || LabelNumber.Text == "-0")
+                        LabelNumber.Text = null;
+                    break;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

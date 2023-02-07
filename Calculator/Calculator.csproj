@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5540327E-13C5-4807-ACB8-7B00DAAA0D08}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Calculator</RootNamespace>
+    <AssemblyName>Calculator</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Additional_Code\ConvertInformation.cs" />
+    <Compile Include="Additional_Code\ConvertTime.cs" />
+    <Compile Include="Additional_Code\FactorialCalculate.cs" />
+    <Compile Include="Additional_Code\PercentCalculate.cs" />
+    <Compile Include="Additional_Code\SortMathExp.cs" />
+    <Compile Include="Antlr3\ANTLRFileStream.cs" />
+    <Compile Include="Antlr3\ANTLRInputStream.cs" />
+    <Compile Include="Antlr3\ANTLRReaderStream.cs" />
+    <Compile Include="Antlr3\ANTLRStringStream.cs" />
+    <Compile Include="Antlr3\AstParserRuleReturnScope`2.cs" />
+    <Compile Include="Antlr3\BaseRecognizer.cs" />
+    <Compile Include="Antlr3\BitSet.cs" />
+    <Compile Include="Antlr3\BufferedTokenStream.cs" />
+    <Compile Include="Antlr3\CharStreamConstants.cs" />
+    <Compile Include="Antlr3\CharStreamState.cs" />
+    <Compile Include="Antlr3\ClassicToken.cs" />
+    <Compile Include="Antlr3\CommonToken.cs" />
+    <Compile Include="Antlr3\CommonTokenStream.cs" />
+    <Compile Include="Antlr3\Debug\IDebugEventListener.cs" />
+    <Compile Include="Antlr3\DFA.cs" />
+    <Compile Include="Antlr3\EarlyExitException.cs" />
+    <Compile Include="Antlr3\FailedPredicateException.cs" />
+    <Compile Include="Antlr3\GrammarRuleAttribute.cs" />
+    <Compile Include="Antlr3\IAstRuleReturnScope.cs" />
+    <Compile Include="Antlr3\IAstRuleReturnScope`1.cs" />
+    <Compile Include="Antlr3\ICharStream.cs" />
+    <Compile Include="Antlr3\IIntStream.cs" />
+    <Compile Include="Antlr3\IRuleReturnScope.cs" />
+    <Compile Include="Antlr3\IRuleReturnScope`1.cs" />
+    <Compile Include="Antlr3\ITemplateRuleReturnScope.cs" />
+    <Compile Include="Antlr3\ITemplateRuleReturnScope`1.cs" />
+    <Compile Include="Antlr3\IToken.cs" />
+    <Compile Include="Antlr3\ITokenSource.cs" />
+    <Compile Include="Antlr3\ITokenStream.cs" />
+    <Compile Include="Antlr3\ITokenStreamInformation.cs" />
+    <Compile Include="Antlr3\LegacyCommonTokenStream.cs" />
+    <Compile Include="Antlr3\Lexer.cs" />
+    <Compile Include="Antlr3\Misc\FastQueue.cs" />
+    <Compile Include="Antlr3\Misc\FunctionDelegates.cs" />
+    <Compile Include="Antlr3\Misc\ListStack`1.cs" />
+    <Compile Include="Antlr3\Misc\LookaheadStream.cs" />
+    <Compile Include="Antlr3\Misc\RegexOptionsHelper.cs" />
+    <Compile Include="Antlr3\MismatchedNotSetException.cs" />
+    <Compile Include="Antlr3\MismatchedRangeException.cs" />
+    <Compile Include="Antlr3\MismatchedSetException.cs" />
+    <Compile Include="Antlr3\MismatchedTokenException.cs" />
+    <Compile Include="Antlr3\MismatchedTreeNodeException.cs" />
+    <Compile Include="Antlr3\MissingTokenException.cs" />
+    <Compile Include="Antlr3\NoViableAltException.cs" />
+    <Compile Include="Antlr3\Parser.cs" />
+    <Compile Include="Antlr3\ParserRuleReturnScope.cs" />
+    <Compile Include="Antlr3\RecognitionException.cs" />
+    <Compile Include="Antlr3\RecognizerSharedState.cs" />
+    <Compile Include="Antlr3\System\ICloneable.cs" />
+    <Compile Include="Antlr3\System\NonSerializedAttribute.cs" />
+    <Compile Include="Antlr3\System\OnSerializingAttribute.cs" />
+    <Compile Include="Antlr3\System\SerializableAttribute.cs" />
+    <Compile Include="Antlr3\System\StreamingContext.cs" />
+    <Compile Include="Antlr3\TemplateParserRuleReturnScope`2.cs" />
+    <Compile Include="Antlr3\TokenChannels.cs" />
+    <Compile Include="Antlr3\TokenRewriteStream.cs" />
+    <Compile Include="Antlr3\Tokens.cs" />
+    <Compile Include="Antlr3\TokenTypes.cs" />
+    <Compile Include="Antlr3\Tree\AntlrRuntime_BaseTreeDebugView.cs" />
+    <Compile Include="Antlr3\Tree\AstTreeRuleReturnScope`2.cs" />
+    <Compile Include="Antlr3\Tree\BaseTree.cs" />
+    <Compile Include="Antlr3\Tree\BaseTreeAdaptor.cs" />
+    <Compile Include="Antlr3\Tree\BufferedTreeNodeStream.cs" />
+    <Compile Include="Antlr3\Tree\CommonErrorNode.cs" />
+    <Compile Include="Antlr3\Tree\CommonTree.cs" />
+    <Compile Include="Antlr3\Tree\CommonTreeAdaptor.cs" />
+    <Compile Include="Antlr3\Tree\CommonTreeNodeStream.cs" />
+    <Compile Include="Antlr3\Tree\DotTreeGenerator.cs" />
+    <Compile Include="Antlr3\Tree\IPositionTrackingStream.cs" />
+    <Compile Include="Antlr3\Tree\ITree.cs" />
+    <Compile Include="Antlr3\Tree\ITreeAdaptor.cs" />
+    <Compile Include="Antlr3\Tree\ITreeNodeStream.cs" />
+    <Compile Include="Antlr3\Tree\ITreeVisitorAction.cs" />
+    <Compile Include="Antlr3\Tree\ParseTree.cs" />
+    <Compile Include="Antlr3\Tree\RewriteCardinalityException.cs" />
+    <Compile Include="Antlr3\Tree\RewriteEarlyExitException.cs" />
+    <Compile Include="Antlr3\Tree\RewriteEmptyStreamException.cs" />
+    <Compile Include="Antlr3\Tree\RewriteRuleElementStream.cs" />
+    <Compile Include="Antlr3\Tree\RewriteRuleNodeStream.cs" />
+    <Compile Include="Antlr3\Tree\RewriteRuleSubtreeStream.cs" />
+    <Compile Include="Antlr3\Tree\RewriteRuleTokenStream.cs" />
+    <Compile Include="Antlr3\Tree\TemplateTreeRuleReturnScope`2.cs" />
+    <Compile Include="Antlr3\Tree\TreeFilter.cs" />
+    <Compile Include="Antlr3\Tree\TreeIterator.cs" />
+    <Compile Include="Antlr3\Tree\TreeParser.cs" />
+    <Compile Include="Antlr3\Tree\TreePatternLexer.cs" />
+    <Compile Include="Antlr3\Tree\TreePatternParser.cs" />
+    <Compile Include="Antlr3\Tree\TreeRewriter.cs" />
+    <Compile Include="Antlr3\Tree\TreeRuleReturnScope`1.cs" />
+    <Compile Include="Antlr3\Tree\TreeVisitor.cs" />
+    <Compile Include="Antlr3\Tree\TreeWizard.cs" />
+    <Compile Include="Antlr3\UnbufferedTokenStream.cs" />
+    <Compile Include="Antlr3\UnwantedTokenException.cs" />
+    <Compile Include="Form1_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1_Main.Designer.cs">
+      <DependentUpon>Form1_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2_Settings.Designer.cs">
+      <DependentUpon>Form2_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NCalc\Domain\BinaryExpression.cs" />
+    <Compile Include="NCalc\Domain\EvaluationVisitor.cs" />
+    <Compile Include="NCalc\Domain\Function.cs" />
+    <Compile Include="NCalc\Domain\LogicalExpression.cs" />
+    <Compile Include="NCalc\Domain\LogicalExpressionVisitor.cs" />
+    <Compile Include="NCalc\Domain\Parameter.cs" />
+    <Compile Include="NCalc\Domain\SerializationVisitor.cs" />
+    <Compile Include="NCalc\Domain\TernaryExpression.cs" />
+    <Compile Include="NCalc\Domain\UnaryExpression.cs" />
+    <Compile Include="NCalc\Domain\Value.cs" />
+    <Compile Include="NCalc\EvaluateFunctionHandler.cs" />
+    <Compile Include="NCalc\EvaluateParameterHandler.cs" />
+    <Compile Include="NCalc\EvaluationException.cs" />
+    <Compile Include="NCalc\EvaluationOption.cs" />
+    <Compile Include="NCalc\Expression.cs" />
+    <Compile Include="NCalc\FunctionArgs.cs" />
+    <Compile Include="NCalc\NCalcLexer.cs" />
+    <Compile Include="NCalc\NCalcParser.cs" />
+    <Compile Include="NCalc\Numbers.cs" />
+    <Compile Include="NCalc\ParameterArgs.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1_Main.resx">
+      <DependentUpon>Form1_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2_Settings.resx">
+      <DependentUpon>Form2_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Additional_Code\Code.txt" />
+    <Content Include="Antlr3\Antlr3.Runtime.csproj" />
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
